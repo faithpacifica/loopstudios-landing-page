@@ -13,20 +13,21 @@
 <body>
     <!-- HEADER + INTRODUCTION -->
     <div class="wrapper">
-        <header class="main-header">
+        <header class="main-header"  id="mainHeader" >
             <div class="container">
                 <div class="row">
                     <a href="index.html" class="logo">
                         <img src="images/logo.png" alt="logo">
                     </a>
-                    <nav class="navbar header-nav">
+                    <nav class="navbar header-nav" id="mainNav">
                         <a class="main-links" href="#">About</a>
                         <a class="main-links" href="#">Careers</a>
                         <a class="main-links" href="#">Events</a>
                         <a class="main-links" href="#">Products</a>
                         <a class="main-links" href="#">Support</a>
                     </nav>
-                    <button type="button" class="hiddenButton"><img src="images/mobileNav.png" alt=""></button>
+                    <button type="button" class="hiddenButton open" onclick="openMenu()"><img src="images/mobileNav.png" alt="button"></button>
+                    <button type="button" id="closeButton" class="hiddenButton close" onclick="closeMenu()"><img src="images/x.svg"></button>
                 </div>
             </div>
         </header>
@@ -156,6 +157,21 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const menu = document.getElementById('mainNav');
+        const header = document.getElementById('mainHeader');
+
+        function openMenu() {
+            menu.style.display="block";
+            closeButton.style.display = "block";
+        }
+        function closeMenu() {
+            menu.style.display="none";
+            closeButton.style.display = "none";
+        }
+
+    </script>
 </body>
 
 </html>

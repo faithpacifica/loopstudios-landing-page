@@ -2,9 +2,21 @@
     .hiddenButton {
         display: none;
     }
+    .close{
+        display: none;
+    }
+    .header-nav{
+        display: block;
+    }
 }
 
 @media (max-width:1199px) {
+    .close{
+        display: none;
+    }
+    .header-nav{
+        display: block;
+    }
 
     .hiddenButton {
         display: none;
@@ -40,7 +52,9 @@
     .hiddenButton {
         display: none;
     }
-
+    .close{
+        display: none;
+    }
     .wrapper {
         padding-left: 20px;
         padding-right: 20px;
@@ -50,7 +64,9 @@
         width: 100%;
         font-size: 56px;
     }
-
+    .header-nav{
+        display: block;
+    }
     .interactive {
         text-align: center;
     }
@@ -129,6 +145,45 @@
     }
 
     .main-header .navbar {
+        display:none;
+        position:absolute;
+        top:0px;
+        left:0;
+        right:0;
+        width: 100%;
+        height: 100%;
+        background-color:#000000; 
+        padding:150px 24px 40px 24px;
+        z-index: 999;
+    }
+
+    .main-header .main-links{
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 24px;
+        line-height: 25px;
+        text-transform: uppercase;
+        color: #FFFFFF;  
+        display:block;
+        margin-bottom:24px;
+    }
+
+    .main-header .main-links::after{
+        width:120px;
+        left:25px;
+        margin-top: 25px;
+        margin-left: 0px;
+    }
+    .wrapper::after{
+        content:"";
+        position:absolute;
+        top:100%;
+        left:0;
+        right:0;
+        height:  670px;
+
+    }
+    .close{
+        z-index:9999;
         display: none;
     }
 
@@ -158,6 +213,15 @@
         line-height: 35px;
         font-size: 35px;
     }
+
+    .footer-links a:not(:last-child) {
+        margin-right:0;
+    }
+
+    .footer-links a{
+        display:block;
+        padding-bottom:15px;
+    }
 }
 
 
@@ -165,8 +229,7 @@
     .pictures h3 {
         font-size: 20px;
         width: 120px;
-        line-height: 23px;
-        left: 20px;
+        line-height: 23px;  
     }
 
     .see-all {
@@ -179,7 +242,7 @@
         font-size: 30px;
     }
 
-    .main-title {
+    .main-title {   
         font-size: 45px;
     }
 
@@ -209,18 +272,25 @@
     }
 
     .pictures h3 {
-        width: 90px;
-        font-size: 17px;
+        width: 125px;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 24px;
     }
 
     .our-creations {
         line-height: 35px;
     }
+    .creations{
+        position:relative;
+    }
 
     .see-all {
-        letter-spacing: 2px;
-        padding: 8px;
-        font-size: 10px;
+        position: absolute;
+        bottom: 56px;
+        left: 30%;
+        padding: 13px 43px 13px 38px;
+        font-size: 14px;
     }
 
     .footer-links {
@@ -243,7 +313,24 @@
     }
 
     .col2 {
-        width: 45%;
+        width: 100%;
+        margin-top:0;
+    }
+    .pictures{
+        width:100%;
+        height:150px;
+        margin-bottom:24px;
+    }
+
+    .pictures img{
+        width:100%;
+        height:100%;
+        object-fit: cover;
+        object-position: 0 -20px;
+    }
+
+   .sub-title{
+        margin:0 auto;
     }
 }
 

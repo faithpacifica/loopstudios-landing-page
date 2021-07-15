@@ -33,7 +33,7 @@ a{
     background-size: cover;
     position: relative;
     /* height:100vh; */
-    padding-bottom:146px;
+    padding-bottom:144px;
 }
 
 .main-header .row{
@@ -50,7 +50,7 @@ a{
     position:relative;
 }
 
-.main-links::after{
+.main-header .main-links::after{
     content:"";
     width:26px;
     height:2px;
@@ -62,15 +62,15 @@ a{
     transform:scaleX(0);
 }
 
-.main-links:hover::after{
+.main-header .main-links:hover::after{
     transform:scaleX(1);
     cursor: pointer;
 }
-.navbar a:not(:last-child){
+.main-header .navbar a:not(:last-child){
     margin-right: 32px;
 }
 
-.main-links{
+.main-header .main-links{
     color: #FFFFFF;
 }
 
@@ -88,8 +88,8 @@ a{
 }
 
 .hiddenButton{
-    width: 24px;
-    height: 24px;
+    width: 23px;
+    height: 23px;
     background-color: transparent;
     padding:0;
     border:none;
@@ -98,7 +98,6 @@ a{
 
 .hiddenButton img{
     width:100%;
-    height:100%;
     margin:0;
 }
 
@@ -243,6 +242,30 @@ a{
 }
 .social-media{
    padding-bottom:24px;
+}
+
+.footer-links .main-links::after{
+    content:"";
+    width:26px;
+    height:2px;
+    margin-top: 25px;
+    margin-left: -35px;
+    background-color:#fff;
+    position:absolute;
+    transition:transform 0.3s ease-in-out;
+    transform:scaleX(0);
+}
+
+.footer-links .main-links:hover::after{
+    transform:scaleX(1);
+    cursor: pointer;
+}
+.footer-links a:not(:last-child){
+    margin-right: 32px;
+}
+
+.footer-links .main-links{
+    color: #FFFFFF;
 }
 
 .footer-links{
